@@ -1,0 +1,79 @@
+body {
+  font-size: 14px;
+  font-family: Verdana, sans-serif;
+  background: #fff;
+  color: #333;
+  margin: 0;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+/* Styles for clock and stop-watch */
+.clock-area {
+  position: relative;
+  font-size: 18px;
+}
+.clock {
+  color:#f00;
+  font-weight:lighter;
+  margin-left:1em;
+}
+#digital-clock.is-hidden, #stop-watch.is-hidden {
+  display: none;  
+}
+#stop-watch.running {
+  color:#00f;
+  font-weight:lighter;
+  margin-left:1em;
+}
+#stop-watch.result {
+  color:#00f;
+  font-weight:bold;
+  margin-left:1em;
+}
+
+#start, #stop {
+  float: left;
+  cursor: pointer;
+  height: 40px;
+  width: 145px;
+  background-color: #ccc;
+  color: black;
+  border:1px solid black;
+  line-height: 24px;
+  font-size: 18px;
+  text-align: center;
+  margin: 8px 8px;
+}
+
+#start.pushed, #stop.pushed {
+  margin-top: 3px;
+  box-shadow: 0 3px 0 #ccc;
+}
+#start.is-hidden, #stop.is-hidden {
+  display: none;
+}
+
+/* Styles for Text Genbun */
+.genbun {
+  font-weight:bold;
+}
+
+.honyaku {
+  color:#00f;
+}
+
+pre {
+  white-space: pre;          
+  white-space: pre-wrap;     
+  white-space: pre-line;     
+  white-space: -pre-wrap;    
+  white-space: -o-pre-wrap;  
+  white-space: -moz-pre-wrap;
+  white-space: -hp-pre-wrap; 
+  word-wrap: break-word;     
+}
