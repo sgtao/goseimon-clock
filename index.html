@@ -13,15 +13,18 @@
       <p>原文書き写しの練習用サイト。時計をつけて、時間を測れるようにする。</p>
     </header>
     <hr>
-    <div class="clock-area"> <!-- 時計を置く-->
-      <span id="digital-clock" class="clock"></span>
-      <span id="stop-watch" class="result">0:0:0.00</span>
+    <div class="timer">
+      <div class="clock-area"> <!-- 時計を置く-->
+        <span id="digital-clock" class="clock"></span>
+        <span id="stop-watch" class="result">0:0:0.00</span>
+      </div>
+      <div class="bottons">
+        <button id="start" class="button"><div class="play"></div> Start（<u>S</u>）</button>
+        <button id="stop"  class="button is-hidden"><div class="stop"></div>
+ Stop（<u>S</u>）</button>
+      </div>
+      <hr>
     </div>
-    <div class="bottons" style="height:50px;">
-      <button id="start">Start（<u>S</u>）</button>
-      <button id="stop"  class="is-hidden">Stop（<u>S</u>）</button>
-    </div>
-    <hr>
     <div>
       <p><b>五ヶ条の御誓文</b>（明治元年三月十四日、1868.04.06_月曜日）</p>
       <div style="margin-left:6em;">御誓文</div>

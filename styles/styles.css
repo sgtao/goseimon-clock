@@ -13,50 +13,110 @@ body {
 
 
 /* Styles for clock and stop-watch */
+.timer {
+  height: 150px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: start;
+  /* justify-content: space-between; */
+}
 .clock-area {
   position: relative;
   font-size: 18px;
 }
-.clock {
+.clock-area .clock {
   color:#f00;
   font-weight:lighter;
   margin-left:1em;
 }
-#digital-clock.is-hidden, #stop-watch.is-hidden {
+.clock-area #digital-clock.is-hidden, #stop-watch.is-hidden {
   display: none;  
 }
-#stop-watch.running {
+.clock-area #stop-watch.running {
   color:#00f;
   font-weight:lighter;
   margin-left:1em;
 }
-#stop-watch.result {
+.clock-area #stop-watch.result {
   color:#00f;
   font-weight:bold;
   margin-left:1em;
 }
-
+.bottons {
+  height:50px;
+  position: relative;
+}
 #start, #stop {
-  float: left;
+  text-align: left;
   cursor: pointer;
   height: 40px;
-  width: 145px;
+  width: 160px;
   background-color: #ccc;
   color: black;
   border:1px solid black;
+  border-radius: 5px;
   line-height: 24px;
   font-size: 18px;
   text-align: center;
   margin: 8px 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all 0.3s;
+  padding-top: 0.2em;
 }
-
-#start.pushed, #stop.pushed {
-  margin-top: 3px;
-  box-shadow: 0 3px 0 #ccc;
+#start:hover, #stop:hover {
+  background-color: #888;
 }
 #start.is-hidden, #stop.is-hidden {
   display: none;
 }
+/* 
+  Icon CSS refered from moru-web.com. thank you.
+  https://moru-web.com/?p=551  
+*/
+/* 円 */
+.play {
+	content: "";
+	font-size: 16px;
+	position: relative;
+	width: 1.4em;
+	height: 1.4em;
+	border: 0.1em solid #333;
+	border-radius: 50%;
+}
+/* マーク */
+.play::before {
+	content: "";
+	position: absolute;
+	top: 0.3em;
+	left: 0.5em;
+	width: 0;
+	height: 0;
+	border-top: 0.4em solid transparent;
+	border-left: 0.6em solid #333;
+	border-bottom: 0.4em solid transparent;
+}
+/* 円 */
+.stop {
+	font-size: 16px;
+	position: relative;
+	width: 1.4em;
+	height: 1.4em;
+	border: 0.1em solid #333;
+	border-radius: 100%;
+}
+/* マーク */
+.stop::before {
+	content: "";
+	position: absolute;
+	top: 0.3em;
+	left: 0.3em;
+	width: 0.8em;
+	height: 0.8em;
+	background-color: #333;
+}
+
 
 /* Styles for Text Genbun */
 .genbun {
