@@ -1,0 +1,161 @@
+html {
+  font-size: 14px;
+  font-family: Verdana, sans-serif;
+  background: #fff;
+  color: #333;
+  margin: 0 auto;
+}
+body {
+  height: 100vh;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+/* Styles for header */
+header {
+  .title {
+    background-color: lightgray;
+    position: absolute;
+    height: 120px;
+    width: 100%;
+    transition: all 1s ease;
+    transition-delay: 1s;
+    z-index: 10;
+    transform: translateY(-110px);
+    &:hover {
+      transition-delay: 0.1s;
+      transform: translateY(0);
+      cursor:pointer;
+    }
+  }
+}
+
+/* Styles for clock and stop-watch */
+.timer {
+  height: 150px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: start;
+  /* justify-content: space-between; */
+}
+.clock-area {
+  position: relative;
+  font-size: 18px;
+}
+.clock-area .clock {
+  color:#f00;
+  font-weight:lighter;
+  margin-left:1em;
+}
+.clock-area #digital-clock.is-hidden, #stop-watch.is-hidden {
+  display: none;  
+}
+.clock-area #stop-watch.running {
+  color:#00f;
+  font-weight:lighter;
+  margin-left:1em;
+}
+.clock-area #stop-watch.result {
+  color:#00f;
+  font-weight:bold;
+  margin-left:1em;
+}
+.bottons {
+  height:50px;
+  position: relative;
+}
+#start, #stop {
+  text-align: left;
+  cursor: pointer;
+  height: 40px;
+  width: 160px;
+  background-color: #ccc;
+  color: black;
+  border:1px solid black;
+  border-radius: 5px;
+  line-height: 24px;
+  font-size: 18px;
+  text-align: center;
+  margin: 8px 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all 0.3s;
+  padding-top: 0.2em;
+}
+#start:hover, #stop:hover {
+  background-color: #888;
+}
+#start.is-hidden, #stop.is-hidden {
+  display: none;
+  // opacity: 0;
+}
+/* 
+  Icon CSS refered from moru-web.com. thank you.
+  https://moru-web.com/?p=551  
+*/
+/* 円 */
+.play {
+	content: "";
+	font-size: 16px;
+	position: relative;
+	width: 1.4em;
+	height: 1.4em;
+	border: 0.1em solid #333;
+	border-radius: 100%;
+}
+/* マーク */
+.play::before {
+	content: "";
+	position: absolute;
+	top: 0.3em;
+	left: 0.3em;
+	width: 0;
+	height: 0;
+	border-top: 0.4em solid transparent;
+	border-left: 0.6em solid #333;
+	border-bottom: 0.4em solid transparent;
+}
+/* 円 */
+.stop {
+	font-size: 16px;
+	position: relative;
+	width: 1.4em;
+	height: 1.4em;
+	border: 0.1em solid #333;
+	border-radius: 50%;
+}
+/* マーク */
+.stop::before {
+	content: "";
+	position: absolute;
+	top: 0.2em;
+	left: 0.2em;
+	width: 0.8em;
+	height: 0.8em;
+	background-color: #333;
+}
+
+
+/* Styles for Text Genbun */
+.genbun {
+  font-weight:bold;
+}
+
+.honyaku {
+  color:#00f;
+}
+
+pre {
+  white-space: pre;          
+  white-space: pre-wrap;     
+  white-space: pre-line;     
+  white-space: -pre-wrap;    
+  white-space: -o-pre-wrap;  
+  white-space: -moz-pre-wrap;
+  white-space: -hp-pre-wrap; 
+  word-wrap: break-word;     
+}
