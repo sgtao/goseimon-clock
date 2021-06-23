@@ -15,6 +15,27 @@ body {
   position: relative;
   z-index: 1; }
 
+.pace {
+  margin: 0 auto;
+  height: 80%;
+  width: 80%;
+  top: 30vh; }
+  .pace::after {
+    content: 'Goseimon-with-Clock';
+    font-size: 24px;
+    position: absolute;
+    color: #e06f24;
+    z-index: 10;
+    top: 60px;
+    left: 40px; }
+
+.pace-running .container {
+  opacity: 0; }
+
+.pace-done .container {
+  transition: opacity 3s;
+  opacity: 1; }
+
 /* Styles for header */
 header .title {
   background-color: lightgray;
@@ -87,7 +108,7 @@ header .title {
   background-color: #888; }
 
 #start.is-hidden, #stop.is-hidden {
-  opacity: 0; }
+  display: none; }
 
 /* 
   Icon CSS refered from moru-web.com. thank you.
