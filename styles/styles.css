@@ -1,175 +1,23 @@
-@charset "UTF-8";
-html {
-  font-size: 14px;
-  font-family: Verdana, sans-serif;
-  background: #fff;
-  color: #333;
-  margin: 0 auto; }
+/*
+Errno::ENOENT: No such file or directory @ rb_sysopen - styles/styles.scss
 
-body {
-  height: 100vh; }
-
-.container {
-  width: 90%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1; }
-
-.pace {
-  margin: 0 auto;
-  height: 80%;
-  width: 80%;
-  top: 30vh; }
-  .pace::after {
-    content: 'Goseimon-with-Clock';
-    font-size: 24px;
-    position: absolute;
-    color: #e06f24;
-    z-index: 10;
-    top: 60px;
-    left: 40px; }
-
-.pace-running .container {
-  opacity: 0; }
-
-.pace-done .container {
-  transition: opacity 3s;
-  opacity: 1; }
-
-/* Styles for header */
-header .title {
-  background-color: lightgray;
-  position: absolute;
-  height: 120px;
-  width: 100%;
-  transition: all 1s ease;
-  transition-delay: 1s;
-  z-index: 10;
-  transform: translateY(-110px); }
-  header .title:hover {
-    transition-delay: 0.1s;
-    transform: translateY(0);
-    cursor: pointer; }
-
-/* Styles for clock and stop-watch */
-.timer {
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  /* justify-content: space-between; */ }
-
-.clock-area {
-  position: relative;
-  font-size: 18px; }
-
-.clock-area .clock {
-  color: #f00;
-  font-weight: lighter;
-  margin-left: 1em; }
-
-.clock-area #digital-clock.is-hidden, #stop-watch.is-hidden {
-  display: none; }
-
-.clock-area #stop-watch.running {
-  color: #00f;
-  font-weight: lighter;
-  margin-left: 1em; }
-
-.clock-area #stop-watch.result {
-  color: #00f;
-  font-weight: bold;
-  margin-left: 1em; }
-
-.bottons {
-  height: 50px;
-  position: relative; }
-
-#start, #stop {
-  text-align: left;
-  cursor: pointer;
-  height: 40px;
-  width: 160px;
-  background-color: #ccc;
-  color: black;
-  border: 1px solid black;
-  border-radius: 5px;
-  line-height: 24px;
-  font-size: 18px;
-  text-align: center;
-  margin: 8px 8px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  transition: all 0.3s;
-  padding-top: 0.2em; }
-
-#start:hover, #stop:hover {
-  background-color: #888; }
-
-#start.is-hidden, #stop.is-hidden {
-  display: none; }
-
-/* 
-  Icon CSS refered from moru-web.com. thank you.
-  https://moru-web.com/?p=551  
+Backtrace:
+/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:454:in `read'
+/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:454:in `update_stylesheet'
+/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:294:in `watch'
+/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/plugin.rb:109:in `method_missing'
+/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:358:in `watch_or_update'
+/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/var/lib/gems/2.5.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/var/lib/gems/2.5.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
 */
-/* 円 */
-.play {
-  content: "";
-  font-size: 16px;
-  position: relative;
-  width: 1.4em;
-  height: 1.4em;
-  border: 0.1em solid #333;
-  border-radius: 100%; }
-
-/* マーク */
-.play::before {
-  content: "";
-  position: absolute;
-  top: 0.3em;
-  left: 0.3em;
-  width: 0;
-  height: 0;
-  border-top: 0.4em solid transparent;
-  border-left: 0.6em solid #333;
-  border-bottom: 0.4em solid transparent; }
-
-/* 円 */
-.stop {
-  font-size: 16px;
-  position: relative;
-  width: 1.4em;
-  height: 1.4em;
-  border: 0.1em solid #333;
-  border-radius: 50%; }
-
-/* マーク */
-.stop::before {
-  content: "";
-  position: absolute;
-  top: 0.2em;
-  left: 0.2em;
-  width: 0.8em;
-  height: 0.8em;
-  background-color: #333; }
-
-/* Styles for Text Genbun */
-.genbun {
-  font-weight: bold; }
-
-.honyaku {
-  color: #00f; }
-
-pre {
+body:before {
   white-space: pre;
-  white-space: pre-wrap;
-  white-space: pre-line;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -hp-pre-wrap;
-  word-wrap: break-word; }
-
-/*# sourceMappingURL=styles.css.map */
+  font-family: monospace;
+  content: "Errno::ENOENT: No such file or directory @ rb_sysopen - styles/styles.scss"; }
