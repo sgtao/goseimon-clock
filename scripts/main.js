@@ -39,7 +39,7 @@
       startTime_str = dd.toLocaleTimeString();
       start.className = 'is-hidden';
       stop.className = '';
-      clock.className = 'is-hidden';
+      clock.className = 'clock';
       watch.className = 'running';
       countUp();
     } else {  // Start to Stop procedure
