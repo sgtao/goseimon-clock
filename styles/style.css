@@ -37,17 +37,31 @@ body {
   opacity: 1; }
 
 /* Styles for header */
+header .title-icon {
+  background-image: url("../icons/outline_title_black_24dp.png");
+  position: absolute;
+  height: 48px;
+  width: 48px;
+  margin: 0 auto;
+  right: 0;
+  text-align: center;
+  z-index: 20;
+  transition: all 1s ease;
+  transition-delay: 0.3s; }
+  header .title-icon:hover {
+    pointer: cursor; }
+  header .title-icon.is-show {
+    background-image: url("../icons/outline_close_black_24dp.png"); }
 header .title {
   background-color: lightgray;
   position: absolute;
   height: auto;
   transition: all 1s ease;
-  transition-delay: 1s;
+  transition-delay: 0.3s;
   z-index: 10;
   opacity: 0;
   transform: translateY(-110px); }
-  header .title:hover {
-    transition-delay: 0.1s;
+  header .title.is-show {
     transform: translateY(0);
     opacity: 1; }
 

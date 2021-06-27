@@ -18,5 +18,13 @@ window.onload = function () {
       }
     }
   });
+  // title action
+  let title = document.querySelector('.title');
+  let title_icon = document.querySelector('.title-icon');
+  title_icon.addEventListener('click', (event) => {
+    title.classList.toggle('is-show');
+    title_icon.classList.toggle('is-show');
+  });
+
 }
 
