@@ -53,9 +53,13 @@ header .title-icon {
   header .title-icon.is-show {
     background-image: url("../icons/outline_close_black_24dp.png"); }
 header .title {
-  background-color: lightgray;
+  color: #e06f24;
+  background-color: white;
+  border: 3px solid #e06f24;
   position: absolute;
   height: auto;
+  width: 100%;
+  padding: 10px;
   transition: all 1s ease;
   transition-delay: 0.3s;
   z-index: 10;
