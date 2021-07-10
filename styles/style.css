@@ -117,7 +117,7 @@ pre {
     font-weight: bold;
     margin-left: 1em; }
   .clocktimer .bottons {
-    height: 50px;
+    height: 56px;
     position: relative;
     text-align: left;
     /* 
@@ -129,14 +129,15 @@ pre {
     /* 停止 – css stop – */ }
     .clocktimer .bottons button {
       cursor: pointer;
-      height: 40px;
-      width: 160px;
-      background-color: #ccc;
-      color: black;
+      height: 56px;
+      width: 240px;
+      background-color: #00a7e9;
+      color: white;
       border: 1px solid black;
       border-radius: 5px;
       line-height: 24px;
-      font-size: 18px;
+      font-size: 24px;
+      padding: 12px 12px;
       text-align: center;
       margin: 8px auto;
       display: flex;
@@ -146,13 +147,13 @@ pre {
       .clocktimer .bottons button.is-hidden {
         display: none; }
       .clocktimer .bottons button:hover {
-        background-color: #888; }
+        background-color: #e97800; }
     .clocktimer .bottons .play {
       font-size: 24px;
       position: relative;
       width: 1.4em;
       height: 1.4em;
-      border: 0.1em solid black;
+      border: 0.1em solid white;
       border-radius: 100%;
       /* マーク */ }
       .clocktimer .bottons .play::before {
@@ -163,14 +164,14 @@ pre {
         width: 0;
         height: 0;
         border-top: 0.4em solid transparent;
-        border-left: 0.6em solid black;
+        border-left: 0.6em solid white;
         border-bottom: 0.4em solid transparent; }
     .clocktimer .bottons .pause {
       font-size: 24px;
       position: relative;
       width: 1.4em;
       height: 1.4em;
-      border: 0.1em solid black;
+      border: 0.1em solid white;
       border-radius: 100%;
       /* マーク */ }
       .clocktimer .bottons .pause::before {
@@ -180,7 +181,7 @@ pre {
         left: -0.1em;
         width: 1.4em;
         height: 1.4em;
-        background: linear-gradient(to bottom, black 0%, black 100%) 0.45em 0.3em, linear-gradient(to bottom, black 0%, black 100%) 0.75em 0.3em;
+        background: linear-gradient(to bottom, white 0%, white 100%) 0.45em 0.3em, linear-gradient(to bottom, white 0%, white 100%) 0.75em 0.3em;
         background-size: 0.2em 0.8em;
         background-repeat: no-repeat; }
 
