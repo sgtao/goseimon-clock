@@ -11,17 +11,23 @@ class ClockTimer {
     this.startTime = 0;
     this.startTime_str = '0:0:0.00';
     this.elapsedTime = 0;
+    this.eventType = this._getEventType();
+    console.log(this.eventType);
     // initial state timer and clock
     this.initialize();
+    // this.elm_timer.innerHTML = this.eventType; // for debug
+  }
+  _getEventType() {
+    return window.ontouchstart ? 'touchstart' : 'click';
   }
   initialize() {
     let self = this;
     self.elm_timer.textContent = '0:0:0.00';
-    self.start_btn.addEventListener('click', function () {
+    self.start_btn.addEventListener(this.eventType, function () {
       if (self.isTimerRunning === true) { return; }
       self.toggleStartStop();
     });
-    self.stop_btn.addEventListener('click', function () {
+    self.stop_btn.addEventListener(this.eventType, function () {
       if (self.isTimerRunning === false) { return; }
       self.toggleStartStop();
     });
