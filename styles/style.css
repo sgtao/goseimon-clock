@@ -77,11 +77,11 @@ main, .hosoku {
 /* Styles for clock and stop-watch */
 /* Styles for Text Genbun */
 .genbun {
-  font-weight: bold; }
+  font-weight: bold;
+  display: none; }
 
 .honyaku {
-  color: #00f;
-  display: none; }
+  color: #00f; }
 
 pre {
   white-space: pre;
@@ -199,7 +199,8 @@ pre {
   ******************************************************************/
   /* Styles for Text Genbun */
   .genbun {
-    font-weight: bold; }
+    font-weight: bold;
+    display: block; }
 
   .honyaku {
     color: #00f;
