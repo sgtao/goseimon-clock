@@ -4,44 +4,37 @@ html {
   font-family: Verdana, sans-serif;
   background: #fff;
   color: #333;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 body {
-  height: 100vh;
-}
+  height: 100vh; }
 
 .container {
   width: 100%;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
-}
+  z-index: 1; }
 
 .pace {
   margin: 0 auto;
   height: 80%;
   width: 80%;
-  top: 30vh;
-}
-.pace::after {
-  content: "Goseimon-with-Clock";
-  font-size: 24px;
-  position: absolute;
-  color: #e06f24;
-  z-index: 10;
-  top: 60px;
-  left: 40px;
-}
+  top: 30vh; }
+  .pace::after {
+    content: 'Goseimon-with-Clock';
+    font-size: 24px;
+    position: absolute;
+    color: #e06f24;
+    z-index: 10;
+    top: 60px;
+    left: 40px; }
 
 .pace-running .container {
-  opacity: 0;
-}
+  opacity: 0; }
 
 .pace-done .container {
   transition: opacity 3s;
-  opacity: 1;
-}
+  opacity: 1; }
 
 /* Styles for header */
 header .title-icon {
@@ -54,14 +47,11 @@ header .title-icon {
   text-align: center;
   z-index: 20;
   transition: all 1s ease;
-  transition-delay: 0.3s;
-}
-header .title-icon:hover {
-  pointer: cursor;
-}
-header .title-icon.is-show {
-  background-image: url("../icons/outline_close_black_24dp.png");
-}
+  transition-delay: 0.3s; }
+  header .title-icon:hover {
+    pointer: cursor; }
+  header .title-icon.is-show {
+    background-image: url("../icons/outline_close_black_24dp.png"); }
 header .title {
   color: #e06f24;
   background-color: white;
@@ -74,29 +64,24 @@ header .title {
   transition-delay: 0.3s;
   z-index: 10;
   opacity: 0;
-  transform: translateY(-110px);
-}
-header .title.is-show {
-  transform: translateY(0);
-  opacity: 1;
-}
+  transform: translateY(-110px); }
+  header .title.is-show {
+    transform: translateY(0);
+    opacity: 1; }
 
 /* Styles of main contents */
 main, .hosoku {
   width: 90%;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 /* Styles for clock and stop-watch */
 /* Styles for Text Genbun */
 .genbun {
   font-weight: bold;
-  display: none;
-}
+  display: none; }
 
 .kakuchou {
-  color: #00f;
-}
+  color: #00f; }
 
 pre {
   white-space: pre;
@@ -106,8 +91,7 @@ pre {
   white-space: -o-pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -hp-pre-wrap;
-  word-wrap: break-word;
-}
+  word-wrap: break-word; }
 
 .clocktimer {
   height: 150px;
@@ -115,132 +99,117 @@ pre {
   flex-direction: column;
   justify-content: start;
   /* justify-content: space-between; */
-  /* children styles */
-}
-.clocktimer .clock-area {
-  display: flex;
-  flex-direction: column;
-  font-size: 18px;
-}
-.clocktimer .clock-area .clock {
-  color: #f00;
-  font-weight: lighter;
-  margin-left: 1em;
-}
-.clocktimer .clock-area #stop-watch.running {
-  color: #00f;
-  font-weight: lighter;
-  margin-left: 1em;
-}
-.clocktimer .clock-area #stop-watch.result {
-  color: #00f;
-  font-weight: bold;
-  margin-left: 1em;
-}
-.clocktimer .bottons {
-  height: 56px;
-  position: relative;
-  text-align: left;
-  /* 
-    Icon CSS refered from moru-web.com. thank you.
-    https://moru-web.com/?p=551  
-  */
-  /* 再生 – css stop – */
-  /* 円 */
-  /* 停止 – css stop – */
-}
-.clocktimer .bottons button {
-  cursor: pointer;
-  height: 56px;
-  width: 240px;
-  background-color: #00a7e9;
-  color: white;
-  border: 1px solid black;
-  border-radius: 5px;
-  line-height: 24px;
-  font-size: 24px;
-  padding: 12px 12px;
-  text-align: center;
-  margin: 8px auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  transition: all 0.3s;
-}
-.clocktimer .bottons button.is-hidden {
-  display: none;
-}
-.clocktimer .bottons button:hover {
-  background-color: #e97800;
-}
-.clocktimer .bottons .play {
-  font-size: 24px;
-  position: relative;
-  width: 1.4em;
-  height: 1.4em;
-  border: 0.1em solid white;
-  border-radius: 100%;
-  /* マーク */
-}
-.clocktimer .bottons .play::before {
-  content: "";
-  position: absolute;
-  top: 0.25em;
-  left: 0.4em;
-  width: 0;
-  height: 0;
-  border-top: 0.4em solid transparent;
-  border-left: 0.6em solid white;
-  border-bottom: 0.4em solid transparent;
-}
-.clocktimer .bottons .pause {
-  font-size: 24px;
-  position: relative;
-  width: 1.4em;
-  height: 1.4em;
-  border: 0.1em solid white;
-  border-radius: 100%;
-  /* マーク */
-}
-.clocktimer .bottons .pause::before {
-  content: "";
-  position: absolute;
-  top: -0.1em;
-  left: -0.1em;
-  width: 1.4em;
-  height: 1.4em;
-  background: linear-gradient(to bottom, white 0%, white 100%) 0.45em 0.3em, linear-gradient(to bottom, white 0%, white 100%) 0.75em 0.3em;
-  background-size: 0.2em 0.8em;
-  background-repeat: no-repeat;
-}
+  /* children styles */ }
+  .clocktimer .clock-area {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px; }
+  .clocktimer .clock-area .clock {
+    color: #f00;
+    font-weight: lighter;
+    margin-left: 1em; }
+  .clocktimer .clock-area #stop-watch.running {
+    color: #00f;
+    font-weight: lighter;
+    margin-left: 1em; }
+  .clocktimer .clock-area #stop-watch.result {
+    color: #00f;
+    font-weight: bold;
+    margin-left: 1em; }
+  .clocktimer .bottons {
+    height: 56px;
+    position: relative;
+    text-align: left;
+    /* 
+      Icon CSS refered from moru-web.com. thank you.
+      https://moru-web.com/?p=551  
+    */
+    /* 再生 – css stop – */
+    /* 円 */
+    /* 停止 – css stop – */ }
+    .clocktimer .bottons button {
+      cursor: pointer;
+      height: 56px;
+      width: 240px;
+      background-color: #00a7e9;
+      color: white;
+      border: 1px solid black;
+      border-radius: 5px;
+      line-height: 24px;
+      font-size: 24px;
+      padding: 12px 12px;
+      text-align: center;
+      margin: 8px auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      transition: all 0.3s; }
+      .clocktimer .bottons button.is-hidden {
+        display: none; }
+      .clocktimer .bottons button:hover {
+        background-color: #e97800; }
+    .clocktimer .bottons .play {
+      font-size: 24px;
+      position: relative;
+      width: 1.4em;
+      height: 1.4em;
+      border: 0.1em solid white;
+      border-radius: 100%;
+      /* マーク */ }
+      .clocktimer .bottons .play::before {
+        content: "";
+        position: absolute;
+        top: 0.25em;
+        left: 0.4em;
+        width: 0;
+        height: 0;
+        border-top: 0.4em solid transparent;
+        border-left: 0.6em solid white;
+        border-bottom: 0.4em solid transparent; }
+    .clocktimer .bottons .pause {
+      font-size: 24px;
+      position: relative;
+      width: 1.4em;
+      height: 1.4em;
+      border: 0.1em solid white;
+      border-radius: 100%;
+      /* マーク */ }
+      .clocktimer .bottons .pause::before {
+        content: "";
+        position: absolute;
+        top: -0.1em;
+        left: -0.1em;
+        width: 1.4em;
+        height: 1.4em;
+        background: linear-gradient(to bottom, white 0%, white 100%) 0.45em 0.3em, linear-gradient(to bottom, white 0%, white 100%) 0.75em 0.3em;
+        background-size: 0.2em 0.8em;
+        background-repeat: no-repeat; }
 
 @media (min-width: 480px) {
   /******************************************************************
-
+  
   Stylesheet: 480px以上(スマホの横向き)のモニタで適用
-
-  ******************************************************************/
-}
+  
+  ******************************************************************/ }
 @media (min-width: 600px) {
   /******************************************************************
-
+  
   Stylesheet: 600px以上のタブレットやモニタで適用
-
+  
   ******************************************************************/
   /* Styles for Text Genbun */
   .genbun {
     font-weight: bold;
-    display: block;
-  }
+    display: block; }
+
   .honyaku {
     color: #00f;
-    display: block;
-  }
-}
+    display: block; } }
 @media print {
   /******************************************************************
-
+  
   Stylesheet: プリンタのみに適用
+  
+  ******************************************************************/ }
 
-  ******************************************************************/
-}/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
